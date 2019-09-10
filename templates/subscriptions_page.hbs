@@ -1,7 +1,7 @@
 <nav class="my-activities-nav collapsible-nav">
   <ul class="collapsible-nav-list container">
     {{#if help_center.request_management_enabled}}
-      <li>{{link 'requests'}}</li>
+    <li>{{link 'requests'}}</li>
     {{/if}}
     <li>{{link 'contributions'}}</li>
     <li aria-selected=true>{{t 'following'}}</li>
@@ -20,9 +20,9 @@
       </span>
       <span class="dropdown-menu" role="menu">
         {{#each filters}}
-          <a href="{{url}}" aria-selected="{{selected}}" role="menuitem">
-            {{name}}
-          </a>
+        <a href="{{url}}" aria-selected="{{selected}}" role="menuitem">
+          {{name}}
+        </a>
         {{/each}}
       </span>
     </span>
@@ -30,37 +30,37 @@
 
   <div class="requests">
     {{#if subscriptions}}
-      <table class="table my-activities-table subscriptions-table">
-        <thead>
-          <tr>
-            <th>{{t 'title'}}</th>
-            <th>{{t 'type'}}</th>
-            <th>{{t 'subscription'}}</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          {{#each subscriptions}}
-            <tr>
-              <td>
-                {{#is type 'user'}}
-                  <img class="user-avatar" src="{{avatar_url}}" alt="">
-                {{/is}}
-                <a href="{{url}}" title="{{title}}" class="striped-list-title">
-                  {{excerpt title characters=60}}
-                </a>
-              </td>
-              <td>{{name}}</td>
-              <td>{{subscribe}}</td>
-              <td class="subscriptions-unsubscribe">{{unsubscribe}}</td>
-            </tr>
-          {{/each}}
-        </tbody>
-      </table>
+    <table class="table my-activities-table subscriptions-table">
+      <thead>
+        <tr>
+          <th>{{t 'title'}}</th>
+          <th>{{t 'type'}}</th>
+          <th>{{t 'subscription'}}</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each subscriptions}}
+        <tr>
+          <td>
+            {{#is type 'user'}}
+            <img class="user-avatar" src="{{avatar_url}}" alt="">
+            {{/is}}
+            <a href="{{url}}" title="{{title}}" class="striped-list-title">
+              {{excerpt title characters=60}}
+            </a>
+          </td>
+          <td>{{name}}</td>
+          <td>{{subscribe}}</td>
+          <td class="subscriptions-unsubscribe">{{unsubscribe}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
 
     {{pagination}}
     {{else}}
-      <p class="no-activities">{{t 'not_following'}}</p>
+    <p class="no-activities">{{t 'not_following'}}</p>
     {{/if}}
   </div>
 </div>

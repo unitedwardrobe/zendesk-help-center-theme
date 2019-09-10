@@ -1,22 +1,75 @@
-<div class="container-divider"></div>
-<div class="container">
-  <nav class="sub-nav">
-    {{breadcrumbs}}
-    {{search submit=false}}
-  </nav>
-
-  <h1>
-    {{t 'submit_a_request'}}
-    {{#if follow_up}}
-      <span class="follow-up-hint">
-        {{follow_up}}
-      </span>
-    {{/if}}
-  </h1>
-
-  <div class="form">
-    {{request_form}}
+<header class="header">
+  <div class="header-content">
+    {{#link 'help_center'}}
+    <div class="logo header-button">
+      <img src="{{asset 'logo.png'}}" alt="{{t 'home_page' name=help_center.name}}" class="hide-desktop" />
+      <img src="{{asset 'logo-horizontal.png'}}" alt="{{t 'home_page' name=help_center.name}}" class="hide-mobile" />
+    </div>
+    {{/link}}
+    <div class="show-search header-button" id="show-search">
+      <img src="{{asset 'search.png'}}" alt={{t 'search'}} />
+    </div>
   </div>
+</header>
 
-  {{chat}}
+<navigation class="content navigation">
+  <section class="inner-content">
+    <div class="back-button hide-desktop" id="back-button">
+      <img src="{{asset 'back-arrow.png'}}" alt="{{t 'home_page' name=help_center.name}}" />
+    </div>
+    <div class="hide-mobile">
+      {{breadcrumbs}}
+    </div>
+  </section>
+</navigation>
+
+<div class="content contact-categories-container" id="contact-categories-section">
+  <section class="inner-content">
+    <h2>{{dc 'hc_contact_form_category_title'}}</h2>
+    <p>{{dc 'hc_contact_form_category_subtitle'}}</p>
+    <ul class="list blocks" id="contact-categories"></ul>
+  </section>
 </div>
+
+<div class="content contact-topics-container" id="contact-topics-section">
+  <section class="inner-content">
+    <h2>{{dc 'hc_contact_form_topics'}}</h2>
+    <ul class="list" id="content-topics">
+    </ul>
+  </section>
+</div>
+
+<div class="content contact-form-container" id="contact-form-section">
+  <section class="inner-content">
+    <div class="contact-form">
+      <h2>{{dc 'hc_contact_form_title'}}</h2>
+      <p>{{dc 'hc_contact_form_subtitle'}}</p>
+      {{request_form}}
+    </div>
+  </section>
+</div>
+
+<div class="orders-overlay" id="orders_overlay">
+  <div class="orders-container">
+    <div class="orders">
+      <div class="orders-header">
+        <div class="orders-header-title">{{dc 'hc_select_order'}}</div>
+        <div class="close-orders" id="close_orders">×</div>
+      </div>
+      <div id="orders"></div>
+    </div>
+  </div>
+  <div class="hide-orders-overlay" id="hide_orders_overlay"></div>
+</div>
+
+<script type="text/javascript">
+  var contactForm = {{ dc 'hc_contact_form' }};
+  var assetIconOther = "{{asset 'icon-other.png'}}";
+  var assetIconGettingStarted = "{{asset 'icon-getting-started.png'}}";
+  var assetParcelReveivedIcon = "{{asset 'icon-parcel-received.png'}}";
+  var assetIconPaying = "{{asset 'icon-paying.png'}}";
+  var assetIconReturn = "{{asset 'icon-return.png'}}";
+  var assetIconMyAccount = "{{asset 'icon-my-account.png'}}";
+  var assetIconCancellation = "{{asset 'icon-cancellation.png'}}";
+  var orderPlaceholder = "{{dc 'hc_select_order'}}";
+</script>

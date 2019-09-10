@@ -1,14 +1,23 @@
-<header class="header">
-  <div class="logo">
-    {{#link 'help_center'}}
-      <img src="{{settings.logo}}" alt="{{t 'home_page' name=help_center.name}}">
-    {{/link}}
+<div class="search-header" id="search-header">
+  <div class="search-header-content">
+    <div class="header blue">
+      <div class="header-content">
+        {{#link 'help_center'}}
+        <div class="logo header-button">
+          <img src="{{asset 'logo.png'}}" alt="{{t 'home_page' name=help_center.name}}" class="hide-desktop" />
+          <img src="{{asset 'logo-horizontal.png'}}" alt="{{t 'home_page' name=help_center.name}}"
+            class="hide-mobile" />
+        </div>
+        {{/link}}
+      </div>
+      <div class="search">
+        <div class="content">
+          <h1>{{dc 'hc_search_title'}}</h1>
+          <p>{{dc 'hc_search_subtitle'}}</p>
+          {{search submit=true instant=settings.instant_search class='search-form'}}
+        </div>
+      </div>
+    </div>
+    <div class="overlay" id="hide-search"></div>
   </div>
-  <div class="nav-wrapper">
-    <span class="icon-menu" tabindex="0" role="button" aria-controls="user-nav" aria-expanded="false" aria-label="{{t 'toggle_navigation'}}"></span>
-    <nav class="user-nav" id="user-nav">
-      {{link 'community'}}
-      {{link 'new_request' class='submit-a-request'}}
-    </nav>
-  </div>
-</header>
+</div>

@@ -1,46 +1,54 @@
-<div class="container-divider"></div>
-<div class="container">
-  <nav class="sub-nav">
-    {{breadcrumbs}}
-    {{search submit=false}}
-  </nav>
+<header class="header">
+  <div class="header-content">
+    {{#link 'help_center'}}
+    <div class="logo header-button">
+      <img src="{{asset 'logo.png'}}" alt="{{t 'home_page' name=help_center.name}}" class="hide-desktop" />
+      <img src="{{asset 'logo-horizontal.png'}}" alt="{{t 'home_page' name=help_center.name}}" class="hide-mobile" />
+    </div>
+    {{/link}}
+    <div class="show-search header-button" id="show-search">
+      <img src="{{asset 'search.png'}}" alt={{t 'search'}} />
+    </div>
+  </div>
+</header>
 
-  <div class="section-container">
-    <section class="section-content">
-      <header class="page-header">
-        <h1>
-          {{section.name}}
-          {{#if section.internal}}
-            <span class="icon-lock" title="{{t 'internal'}}"></span>
-          {{/if}}
-        </h1>
-        {{#if settings.show_follow_section}}
-          {{subscribe}}
-        {{/if}}
-        {{#if section.description}}
-          <p class="page-header-description">{{section.description}}</p>
-        {{/if}}
-      </header>
+<navigation class="content navigation">
+  <section class="inner-content">
+    <div class="back-button hide-desktop" id="back-button">
+      <img src="{{asset 'back-arrow.png'}}" alt="{{t 'home_page' name=help_center.name}}" />
+    </div>
+    <div class="hide-mobile">
+      {{breadcrumbs}}
+    </div>
+  </section>
+</navigation>
 
+<div class="content">
+  <section class="inner-content">
+    <h1>{{section.name}}</h1>
+    <ul class="list">
+      {{#each section.articles}}
+      <li>
+        <a href='{{url}}'>{{title}}</a>
+      </li>
+      {{/each}}
+    </ul>
+  </section>
+</div>
 
-      {{#if section.articles}}
-        <ul class="article-list">
-          {{#each section.articles}}
-            <li class="article-list-item {{#if promoted}} article-promoted{{/if}}">
-              {{#if promoted}}
-                <span data-title="{{t 'promoted'}}" class="icon-star"></span>
-              {{/if}}
-              <a href="{{url}}" class="article-list-link">{{title}}</a>
-            </li>
-          {{/each}}
-        </ul>
-      {{else}}
-        <i class="section-empty">
-          <a href="{{section.url}}">{{t 'empty'}}</a>
-        </i>
-      {{/if}}
+<div class="content">
+  <div class="inner-content">
+    {{pagination}}
+  </div>
+</div>
 
-      {{pagination}}
-    </section>
+<div class="content">
+  <div class="inner-content">
+    <h3>{{dc 'hc_contact_button_title'}}</h3>
+    <div class="section-contact-button uw-button">
+      {{#link 'new_request'}}
+      {{dc 'hc_contact_button_label'}}
+      {{/link}}
+    </div>
   </div>
 </div>

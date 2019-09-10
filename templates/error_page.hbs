@@ -1,21 +1,34 @@
-<div class="container-divider"></div>
-<div class="error-page">
-  <h1>{{t 'oops'}}</h1>
+<header class="header">
+  <div class="header-content">
+    {{#link 'help_center'}}
+    <div class="logo header-button">
+      <img src="{{asset 'logo.png'}}" alt="{{t 'home_page' name=help_center.name}}" class="hide-desktop" />
+      <img src="{{asset 'logo-horizontal.png'}}" alt="{{t 'home_page' name=help_center.name}}" class="hide-mobile" />
+    </div>
+    {{/link}}
+    <div class="show-search header-button" id="show-search">
+      <img src="{{asset 'search.png'}}" alt={{t 'search'}} />
+    </div>
+  </div>
+</header>
 
-  {{#is error 'unauthorized'}}
-    <h2>{{link 'sign_in'}}</h2>
-  {{/is}}
+<div class="content">
+  <div class="inner-content">
+    <div class="error-page">
+      <h1>{{t 'oops'}}</h1>
 
-  {{#is error 'forbidden'}}
-    <h2>{{t 'not_authorized'}}</h2>
-  {{/is}}
+      {{#is error 'unauthorized'}}
+      <h2>{{link 'sign_in'}}</h2>
+      {{/is}}
 
-  {{#is error 'not_found'}}
-    <h2>{{t 'nonexistent_page'}}</h2>
-    <p>{{t 'mistyped_address_or_moved_page'}}</p>
-  {{/is}}
+      {{#is error 'forbidden'}}
+      <h2>{{t 'not_authorized'}}</h2>
+      {{/is}}
 
-  {{#link 'help_center'}}
-    {{t 'back_to_homepage'}}
-  {{/link}}
+      {{#is error 'not_found'}}
+      <h2>{{t 'nonexistent_page'}}</h2>
+      <p>{{t 'mistyped_address_or_moved_page'}}</p>
+      {{/is}}
+    </div>
+  </div>
 </div>
