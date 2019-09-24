@@ -35,8 +35,8 @@ h1 {
 
 input,
 textarea {
-  -webkit-appearance: none;
-  appearance: none;
+  -webkit-appearance: none !important;
+  appearance: none !important;
   outline: none;
   border: none;
   border-radius: 0;
