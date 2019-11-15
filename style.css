@@ -23,10 +23,11 @@ a img {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-weight: 600;
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 h1 {
@@ -81,6 +82,12 @@ h3 {
   max-width: 1024px;
   margin: 0 auto;
   width: 100%;
+}
+
+.centered-content .inner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .inner-content > h2 {
@@ -625,6 +632,76 @@ ul.list {
   text-decoration: underline;
 }
 
+.article-body h2,
+.article-body h3,
+.article-body h4 {
+  font-family: "Montserrat", sans-serif;
+  color: #082229;
+  margin-top: 4rem;
+}
+
+.article-body strong {
+  color: #082229;
+}
+
+.article-body pre {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  background-color: #ecfbff;
+  white-space: normal;
+  font-size: 1.4rem;
+  color: #082229;
+  padding: 16px 24px 16px 54px;
+  margin: 3.2rem 0;
+}
+
+.article-body pre::before {
+  content: "i";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 20px;
+  left: 18px;
+  height: 20px;
+  width: 20px;
+  background-color: #00c6ff;
+  border-radius: 50%;
+  font-size: 16px;
+  color: #ecfbff;
+  font-family: monospace;
+  font-weight: bold;
+}
+
+.article-body th {
+  border-bottom: 1px solid #d8d8d8;
+  border-right: 1px solid #d8d8d8;
+  padding: 4px 4px 4px 8px;
+  text-align: left;
+}
+.article-body th:last-child {
+  border-right: none;
+}
+
+.article-body td {
+  padding: 4px 4px 4px 8px;
+  border-right: 1px solid #d8d8d8;
+}
+
+.article-body td:last-child {
+  border-right: none;
+}
+
+.article-body tr:nth-child(even) {
+  background-color: #f2f9fb;
+}
+
+@media (max-width: 1023px) {
+  .article-body pre {
+    font-size: 1.6rem;
+  }
+}
+
 .contact-section {
   display: none;
 }
@@ -950,6 +1027,7 @@ ul.list {
 .section-contact-button {
   margin-top: 24px;
   max-width: 516px;
+  width: 100%;
 }
 
 /* ORDERS */
