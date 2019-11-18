@@ -459,6 +459,7 @@ ul.list {
 
 .block-title {
   flex: 1;
+  text-align: left;
 }
 
 @media (min-width: 1024px) {
@@ -491,6 +492,7 @@ ul.list {
     font-weight: 600;
     font-size: 2rem;
     margin: 24px 0 0 0;
+    text-align: center;
     flex: 0;
   }
 
@@ -673,11 +675,16 @@ ul.list {
   font-weight: bold;
 }
 
+.article-body table {
+  margin-top: 1.8rem;
+}
+
 .article-body th {
   border-bottom: 1px solid #d8d8d8;
   border-right: 1px solid #d8d8d8;
   padding: 4px 4px 4px 8px;
   text-align: left;
+  font-weight: 400;
 }
 .article-body th:last-child {
   border-right: none;
@@ -692,7 +699,7 @@ ul.list {
   border-right: none;
 }
 
-.article-body tr:nth-child(even) {
+.article-body tbody tr:nth-child(odd) {
   background-color: #f2f9fb;
 }
 
