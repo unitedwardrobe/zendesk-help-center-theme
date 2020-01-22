@@ -229,6 +229,9 @@ $(document).ready(function() {
       ordersEl.append(orderItemEl);
       orderItemEl.on("click", function() {
         orderEl.val(order.orderReference);
+        $("#request_subject").val(
+          "Help Center contact form (" + order.orderReference + ")"
+        );
         window.history.back();
       });
     });
