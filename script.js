@@ -135,7 +135,10 @@ $(document).ready(function() {
     topicsSectionEl.hide();
     formSectionEl.show();
 
-    $("#request_subject").val("Help Center contact form");
+    var subjectEl = $("#request_subject");
+    if (!subjectEl.val().length) {
+      $("#request_subject").val("Help Center contact form");
+    }
 
     if (category) {
       $("#request_custom_fields_360004329459").val(category.id);
