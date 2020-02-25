@@ -342,6 +342,17 @@ h3 {
   }
 }
 
+/* PROMOTED ARTICLES */
+.promoted-articles {
+  margin-top: 48px;
+}
+
+@media (min-width: 1024px) {
+  .content {
+    margin-bottom: 64px;
+  }
+}
+
 /* CATEGORIES */
 
 .categories {

@@ -16,6 +16,21 @@
   </div>
 </header>
 
+<div class="content promoted-articles">
+  <section class="inner-content">
+    <h2>{{t 'promoted_articles'}}</h2>
+    <ul class="list">
+      {{#each promoted_articles}}
+      <li>
+        <a href='{{url}}'>
+          {{title}}
+        </a>
+      </li>
+      {{/each}}
+    </ul>
+  </section>
+</div>
+
 <ul class="categories">
   {{#each categories}}
   <li class="category-button" data-category-id="{{id}}">{{name}}</li>
@@ -105,19 +120,4 @@
     </ul>
   </section>
   {{/each}}
-</div>
-
-<div class="content">
-  <section class="inner-content">
-    <h2>{{t 'promoted_articles'}}</h2>
-    <ul class="list">
-      {{#each promoted_articles}}
-      <li>
-        <a href='{{url}}'>
-          {{title}}
-        </a>
-      </li>
-      {{/each}}
-    </ul>
-  </section>
 </div>
