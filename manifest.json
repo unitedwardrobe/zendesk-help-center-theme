@@ -1,7 +1,7 @@
 {
   "name": "United Wardrobe",
   "author": "Zendesk",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "api_version": 1,
   "default_locale": "en-us",
   "settings": [
