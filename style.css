@@ -3,8 +3,8 @@
 html,
 body {
   font-size: 10px;
-  font-family: "Gibson", sans-serif;
-  color: #082229;
+  font-family: "MaisonNeue", sans-serif;
+  color: #111111;
   -webkit-font-smoothing: antialiased;
   position: relative;
   min-height: 100vh;
@@ -187,7 +187,7 @@ h3 {
 
 .search-form {
   display: flex;
-  border-radius: 8px;
+  border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 2px 4px 0 rgba(8, 34, 41, 0.2);
   max-width: 520px;
@@ -197,18 +197,18 @@ h3 {
 
 .search-form input[type="search"] {
   font-size: 1.7rem;
-  font-family: "Gibson", sans-serif;
+  font-family: "MaisonNeue", sans-serif;
   padding: 0 16px 0 56px;
   flex: 1;
   height: 56px;
-  font-weight: normal;
-  color: #082229;
+  font-weight: 300;
+  color: #111111;
 }
 
 .search-form input[type="search"]::placeholder {
   color: #959595;
   font-size: 1.7rem;
-  font-family: "Gibson", sans-serif;
+  font-family: "MaisonNeue", sans-serif;
 }
 
 .search-form:before {
@@ -224,7 +224,7 @@ h3 {
 }
 
 .search-form input[type="submit"] {
-  background-color: #01befe;
+  background-color: #09b1ba;
   padding: 0 24px;
   height: 56px;
   color: #fff;
@@ -310,7 +310,7 @@ h3 {
   display: flex;
   list-style: none;
   font-size: 1.3rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "MaisonNeue", sans-serif;
 }
 
 .navigation .breadcrumbs li:last-child::after {
@@ -327,7 +327,7 @@ h3 {
 
 .navigation .breadcrumbs a {
   text-decoration: none;
-  color: #01befe;
+  color: #09b1ba;
 }
 
 .navigation .breadcrumbs a:hover {
@@ -335,7 +335,7 @@ h3 {
 }
 
 .navigation .breadcrumbs li:last-child a {
-  color: rgba(8, 34, 41, 0.75);
+  color: #666666;
 }
 
 @media (min-width: 1024px) {
@@ -374,7 +374,6 @@ h3 {
   justify-content: center;
   align-items: center;
   padding: 12px 8px;
-  flex: 1;
   max-width: 160px;
   font-size: 1.5rem;
   cursor: pointer;
@@ -388,7 +387,7 @@ h3 {
   display: none;
   width: 36px;
   height: 4px;
-  background-color: #01befe;
+  background-color: #09b1ba;
   border-radius: 2px;
   position: absolute;
   left: 50%;
@@ -397,7 +396,7 @@ h3 {
 }
 
 .category-button:hover {
-  color: #082229;
+  color: #111111;
 }
 
 .category-button.selected::after {
@@ -405,7 +404,7 @@ h3 {
 }
 
 .category-button.selected {
-  color: #082229;
+  color: #111111;
   font-weight: 500;
 }
 
@@ -415,10 +414,11 @@ h3 {
   }
 
   .category-button {
-    max-width: 210px;
+    max-width: none;
     height: 48px;
     border-radius: 24px;
     font-size: 1.8rem;
+    padding: 12px 24px;
   }
 }
 
@@ -443,7 +443,7 @@ ul.list {
   width: 100%;
   min-height: 80px;
   padding: 12px 0;
-  color: #082229;
+  color: #111111;
   font-weight: 400;
   font-size: 1.7rem;
   line-height: 2.4rem;
@@ -453,7 +453,7 @@ ul.list {
 
 .list li > .item:hover,
 .list li > a:hover {
-  color: #01befe;
+  color: #09b1ba;
 }
 
 .list li > .item::after,
@@ -503,7 +503,7 @@ ul.list {
   .blocks li .item {
     height: 240px;
     border: 2px solid #eee;
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 12px;
     flex-direction: column;
     justify-content: center;
@@ -511,7 +511,7 @@ ul.list {
 
   .blocks li a:hover,
   .blocks li .item:hover {
-    border-color: #d9f6ff;
+    border-color: #c9f0ee;
   }
 
   .blocks li a:after,
@@ -566,12 +566,12 @@ ul.list {
 
 .footer a {
   font-size: 1.7rem;
-  color: #082229;
+  color: #111111;
   text-decoration: none;
 }
 
 .footer a:hover {
-  color: #01befe;
+  color: #09b1ba;
 }
 
 .dropdown-toggle::after {
@@ -660,13 +660,13 @@ ul.list {
 .article-body {
   margin-top: 24px;
   font-size: 1.6rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "MaisonNeue", sans-serif;
   line-height: 2.4rem;
-  color: rgba(8, 34, 41, 0.75);
+  color: #666666;
 }
 
 .article-body a {
-  color: #01befe;
+  color: #09b1ba;
   text-decoration: none;
 }
 
@@ -677,25 +677,25 @@ ul.list {
 .article-body h2,
 .article-body h3,
 .article-body h4 {
-  font-family: "Gibson", sans-serif;
-  color: #082229;
+  font-family: "MaisonNeue", sans-serif;
+  color: #111111;
   margin-top: 4rem;
   font-weight: 500;
 }
 
 .article-body strong {
-  color: #082229;
+  color: #111111;
 }
 
 .article-body pre {
   position: relative;
-  font-family: "Open Sans", sans-serif;
+  font-family: "MaisonNeue", sans-serif;
   white-space: normal;
   font-size: 1.4rem;
-  color: #082229;
+  color: #666666;
   padding: 16px 24px 16px 54px;
   margin: 3.2rem 0;
-  background-color: #e5f8fe;
+  border: 1px solid rgba(17, 17, 17, 0.08);
   border-radius: 12px;
 }
 
@@ -843,11 +843,11 @@ ul.list {
 .uw-button a {
   position: relative;
   height: 52px;
-  border-radius: 8px;
-  font-family: "Open Sans", sans-serif;
+  border-radius: 4px;
+  font-family: "MaisonNeue", sans-serif;
   font-size: 1.8rem;
-  font-weight: bold;
-  background-color: #01befe;
+  font-weight: 500;
+  background-color: #09b1ba;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -899,7 +899,7 @@ ul.list {
   height: 32px;
   border-radius: 2px;
   font-size: 1.7rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "MaisonNeue", sans-serif;
 }
 
 .pagination li:not(.pagination-current):hover {
@@ -907,13 +907,13 @@ ul.list {
 }
 
 .pagination-current {
-  background-color: #01befe;
+  background-color: #09b1ba;
   color: #fff;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .pagination a {
-  color: #082229;
+  color: #111111;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -959,20 +959,15 @@ ul.list {
   max-width: 560px;
 }
 
-.contact-topics-container,
-.contact-form-container {
-  display: none;
-}
-
 .contact-form-container h2 .contact-topics-container h2 {
   font-size: 3.2rem;
   font-weight: 500;
 }
 
 .contact-form-container p {
-  color: rgba(8, 34, 41, 0.75);
+  color: #666666;
   font-size: 1.6rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "MaisonNeue", sans-serif;
   line-height: 2.4rem;
 }
 
@@ -990,70 +985,65 @@ ul.list {
 
 .form-field.required label::after {
   content: " *";
-  color: #01befe;
+  color: #09b1ba;
 }
 
+.nesty-input,
 .form-field input[type="text"],
 .upload-dropzone,
 .form-field textarea {
   position: relative;
   padding: 15px 16px;
   border: 1px solid #e2e7ea;
-  border-radius: 8px;
+  border-radius: 4px;
   font-weight: 500;
   transition: border 150ms ease-in-out;
   font-size: 1.7rem;
-  color: #082229;
-  font-weight: normal;
-  font-family: "Gibson", sans-serif;
+  color: #111111;
+  font-weight: 300;
+  font-family: "MaisonNeue", sans-serif;
   line-height: 2.5rem;
+}
+
+.nesty-input {
+  height: 52px;
+  outline: none;
+  padding: 0 50px 0 16px;
+  line-height: 52px;
+}
+
+.nesty-input:focus {
+  border: 1px solid #09b1ba;
+}
+
+.nesty-input::after {
+  content: "";
+  background-image: url($assets-angle-down-png);
+  background-size: contain;
+  width: 18px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
 }
 
 .upload-dropzone a,
 .upload-dropzone span {
   font-size: 1.7rem;
   color: #959595;
-  font-weight: normal;
-  font-family: "Gibson", sans-serif;
+  font-weight: 300;
+  font-family: "MaisonNeue", sans-serif;
 }
 
 .form-field input:focus,
 .form-field textarea:focus {
   outline: none;
-  border-color: #01befe;
+  border-color: #09b1ba;
 }
 
 .form-field textarea {
   height: 180px;
-}
-
-.request_custom_fields_360004329459,
-.request_custom_fields_360004301640,
-.request_subject {
-  display: none;
-}
-
-.request_custom_fields_360004408319 {
-  position: relative;
-  display: none;
-}
-
-#request_custom_fields_360004408319 {
-  cursor: pointer;
-}
-
-.request_custom_fields_360004408319::after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 20px;
-  right: 16px;
-  width: 17px;
-  height: 10px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url($assets-angle-down-png);
-  pointer-events: none;
 }
 
 .contact-categories-container p {
@@ -1150,7 +1140,7 @@ ul.list {
 }
 
 .additional-images {
-  background-color: #01befe;
+  background-color: #09b1ba;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1171,14 +1161,14 @@ ul.list {
 }
 
 .order-date {
-  font-family: "Open Sans", sans-serif;
+  font-family: "MaisonNeue", sans-serif;
   margin-top: 4px;
   font-size: 1.2rem;
   color: #aaa;
 }
 
 .order:hover .order-reference {
-  color: #01befe;
+  color: #09b1ba;
 }
 
 .community-enabled .orders-container {

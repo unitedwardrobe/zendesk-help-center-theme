@@ -1,9 +1,9 @@
 {
-  "name": "United Wardrobe",
+  "name": "Vinted CA",
   "author": "Zendesk",
-  "version": "1.2.2",
+  "version": "2.0.0",
   "api_version": 1,
-  "default_locale": "en-us",
+  "default_locale": "en-ca",
   "settings": [
     {
       "label": "brand_group_label",
