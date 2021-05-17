@@ -1,7 +1,7 @@
 {
   "name": "Vinted CA",
   "author": "Zendesk",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "api_version": 1,
   "default_locale": "en-ca",
   "settings": [

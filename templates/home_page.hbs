@@ -51,100 +51,11 @@
           <li>
             <a href="{{url}}">
               <div class="block-icon">
-                {{! Buyer icons }}
-                {{#is id 360005487979}}
-                  <img src="{{asset "icon-my-wardrobe.png"}}" alt="{{name}}" />
-                {{else}}
-                  {{#is id 360005487999}}
-                    <img
-                      src="{{asset "icon-getting-started.png"}}"
-                      alt="{{name}}"
-                    />
-                  {{else}}
-                    {{#is id 360005448420}}
-                      <img
-                        src="{{asset "icon-parcel-received.png"}}"
-                        alt="{{name}}"
-                      />
-                    {{else}}
-                      {{#is id 360005488019}}
-                        <img src="{{asset "icon-paying.png"}}" alt="{{name}}" />
-                      {{else}}
-                        {{#is id 360005448440}}
-                          <img
-                            src="{{asset "icon-cancellation.png"}}"
-                            alt="{{name}}"
-                          />
-                        {{else}}
-                          {{#is id 360005488059}}
-                            <img
-                              src="{{asset "icon-my-wardrobe.png"}}"
-                              alt="{{name}}"
-                            />
-                          {{else}}
-                            {{#is id 360005448460}}
-                              <img
-                                src="{{asset "icon-getting-started.png"}}"
-                                alt="{{name}}"
-                              />
-                            {{else}}
-                              {{#is id 360005448480}}
-                                <img
-                                  src="{{asset "icon-return.png"}}"
-                                  alt="{{name}}"
-                                />
-                              {{else}}
-                                {{#is id 360005488079}}
-                                  <img
-                                    src="{{asset "icon-paying.png"}}"
-                                    alt="{{name}}"
-                                  />
-                                {{else}}
-                                  {{#is id 360005488099}}
-                                    <img
-                                      src="{{asset "icon-my-account.png"}}"
-                                      alt="{{name}}"
-                                    />
-                                  {{else}}
-                                    {{#is id 360005488119}}
-                                      <img
-                                        src="{{asset
-                                          "icon-parcel-received.png"
-                                        }}"
-                                        alt="{{name}}"
-                                      />
-                                    {{else}}
-                                      {{#is id 360005448520}}
-                                        <img
-                                          src="{{asset "icon-paying.png"}}"
-                                          alt="{{name}}"
-                                        />
-                                      {{else}}
-                                        {{#is id 360005488139}}
-                                          <img
-                                            src="{{asset
-                                              "icon-cancellation.png"
-                                            }}"
-                                            alt="{{name}}"
-                                          />
-                                        {{else}}
-                                          <img
-                                            src="{{asset "icon-other.png"}}"
-                                            alt="{{name}}"
-                                          />
-                                        {{/is}}
-                                      {{/is}}
-                                    {{/is}}
-                                  {{/is}}
-                                {{/is}}
-                              {{/is}}
-                            {{/is}}
-                          {{/is}}
-                        {{/is}}
-                      {{/is}}
-                    {{/is}}
-                  {{/is}}
-                {{/is}}
+                <img
+                  src="{{asset id suffix=".png"}}"
+                  alt="{{name}}"
+                  onerror="this.src='{{asset "360005487959.png"}}'"
+                />
               </div>
               <span class="block-title">{{name}}</span>
             </a>
