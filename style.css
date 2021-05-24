@@ -137,7 +137,7 @@ h3 {
 }
 
 .header-button img {
-  height: 24px;
+  height: 36px;
 }
 
 .show-search img {
@@ -553,7 +553,7 @@ ul.list {
 }
 
 .footer-logo .horizontal-logo {
-  height: 24px;
+  height: 36px;
 }
 
 .footer-logo .vertical-logo {
@@ -601,6 +601,16 @@ ul.list {
   .footer-terms {
     margin-right: 32px;
   }
+
+  .footer-terms a::after {
+    content: "·";
+    display: inline-block;
+    margin: 0 8px;
+  }
+
+  .footer-terms a:last-child::after {
+    display: none;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -609,7 +619,13 @@ ul.list {
   }
 
   .footer-terms {
-    margin: 24px 0;
+    margin: 16px 0;
+  }
+
+  .footer-terms a {
+    display: block;
+    text-align: center;
+    margin: 8px 0;
   }
 
   .footer-inner {

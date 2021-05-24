@@ -1,13 +1,21 @@
 <header class="header">
   <div class="header-content">
-    {{#link 'help_center'}}
-    <div class="logo header-button">
-      <img src="{{asset 'logo.png'}}" alt="{{t 'home_page' name=help_center.name}}" class="hide-desktop" />
-      <img src="{{asset 'logo-horizontal.png'}}" alt="{{t 'home_page' name=help_center.name}}" class="hide-mobile" />
-    </div>
+    {{#link "help_center"}}
+      <div class="logo header-button">
+        <img
+          src="{{asset "logo.png"}}"
+          alt="{{t "home_page" name=help_center.name}}"
+          class="hide-desktop"
+        />
+        <img
+          src="{{asset "logo-horizontal.png"}}"
+          alt="{{t "home_page" name=help_center.name}}"
+          class="hide-mobile"
+        />
+      </div>
     {{/link}}
     <div class="show-search header-button" id="show-search">
-      <img src="{{asset 'search.png'}}" alt={{t 'search'}} />
+      <img src="{{asset "search.png"}}" alt={{t "search"}} />
     </div>
   </div>
 </header>
@@ -15,7 +23,10 @@
 <navigation class="content navigation">
   <section class="inner-content">
     <div class="back-button hide-desktop" id="back-button">
-      <img src="{{asset 'back-arrow.png'}}" alt="{{t 'home_page' name=help_center.name}}" />
+      <img
+        src="{{asset "back-arrow.png"}}"
+        alt="{{t "home_page" name=help_center.name}}"
+      />
     </div>
     <div class="hide-mobile">
       {{breadcrumbs}}
@@ -27,27 +38,37 @@
   <div class="inner-content">
     <div class="article-container">
       <navigation class="sidebar">
-        <h2>{{t 'articles_in_section'}}</h2>
+        <h2>{{t "articles_in_section"}}</h2>
         <ul class="list sidebar-list">
           {{#each section.articles}}
-          <li>
-            <a href='{{url}}'>{{title}}</a>
-          </li>
+            <li>
+              <a href="{{url}}">{{title}}</a>
+            </li>
           {{/each}}
         </ul>
       </navigation>
       <article class="article">
         {{#with article}}
-        <h1>{{title}}</h1>
-        <div class="article-body">{{body}}</div>
+          <h1>{{title}}</h1>
+          <div class="article-body">{{body}}</div>
 
-        <div class="vote">
-          <h2>{{t 'was_this_article_helpful'}}</h2>
-          <div class="vote-buttons">
-            {{vote 'up' class='article-vote-up' selected_class='article-voted' role='button'}}
-            {{vote 'down' class='article-vote-down' selected_class='article-voted' role='button'}}
+          <div class="vote">
+            <h2>{{t "was_this_article_helpful"}}</h2>
+            <div class="vote-buttons">
+              {{vote
+                "up"
+                class="article-vote-up"
+                selected_class="article-voted"
+                role="button"
+              }}
+              {{vote
+                "down"
+                class="article-vote-down"
+                selected_class="article-voted"
+                role="button"
+              }}
+            </div>
           </div>
-        </div>
         {{/with}}
       </article>
     </div>
@@ -58,10 +79,10 @@
       </div>
 
       <div class="article-contact">
-        <h3>{{dc 'hc_contact_button_title'}}</h3>
+        <h3>{{dc "hc_contact_button_title"}}</h3>
         <div class="article-contact-button uw-button">
-          {{#link 'new_request'}}
-          {{dc 'hc_contact_button_label'}}
+          {{#link "new_request"}}
+            {{dc "hc_contact_button_label"}}
           {{/link}}
         </div>
       </div>
