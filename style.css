@@ -236,6 +236,10 @@ h3 {
   min-width: 160px;
 }
 
+.search-form input[type="submit"]:hover {
+  background-color: rgb(0, 117, 128);
+}
+
 @media (max-width: 1023px) {
   .search {
     margin: 36px auto 48px auto;
@@ -322,7 +326,7 @@ h3 {
   display: inline-block;
   width: 16px;
   text-align: center;
-  color: #a9b2b4;
+  color: #757575;
 }
 
 .navigation .breadcrumbs a {
@@ -377,7 +381,7 @@ h3 {
   max-width: 160px;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #a9b2b4;
+  color: #757575;
   text-align: center;
   transition: color 150ms ease-in-out;
 }
@@ -502,7 +506,7 @@ ul.list {
   .blocks li a,
   .blocks li .item {
     height: 240px;
-    border: 2px solid #eee;
+    border: 2px solid #F2F2F2;
     border-radius: 4px;
     padding: 12px;
     flex-direction: column;
@@ -511,7 +515,7 @@ ul.list {
 
   .blocks li a:hover,
   .blocks li .item:hover {
-    border-color: #c9f0ee;
+    border-color: #eeeeee;
   }
 
   .blocks li a:after,
@@ -539,7 +543,7 @@ ul.list {
 
 .footer {
   margin-top: 128px;
-  background-color: #f7f7f7;
+  background-color: #f2f2f2;
   padding: 0 20px;
 }
 
@@ -677,6 +681,7 @@ ul.list {
   margin-top: 24px;
   font-size: 1.6rem;
   font-family: "MaisonNeue", sans-serif;
+  font-weight: 300;
   line-height: 2.4rem;
   color: #757575;
 }
@@ -872,6 +877,11 @@ ul.list {
   overflow: hidden;
   width: 100%;
   border: none;
+}
+
+.request-form input[type="submit"]:hover,
+.uw-button a:hover {
+  background-color: rgb(0, 117, 128);
 }
 
 .request-form footer:hover::after,
