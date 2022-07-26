@@ -894,7 +894,6 @@ ul.list {
   top: 0;
   left: 0;
   pointer-events: none;
-  background-color: rgba(255, 255, 255, 0.2);
   display: block;
 }
 
