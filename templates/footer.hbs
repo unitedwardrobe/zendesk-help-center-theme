@@ -1,30 +1,41 @@
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-logo">
-      {{#link 'help_center'}}
-      <img src="{{asset 'logo-horizontal.png'}}" alt="{{help_center.name}}" class="horizontal-logo hide-mobile" />
-      <img src="{{asset 'logo-vertical.png'}}" alt="{{help_center.name}}" class="vertical-logo hide-desktop" />
+      {{#link "help_center"}}
+        <img
+          src="{{asset "logo-horizontal.png"}}"
+          alt="{{help_center.name}}"
+          class="horizontal-logo"
+        />
       {{/link}}
     </div>
     <div class="footer-terms">
-      <a href="https://unitedwardrobe.com/en/terms-and-conditions-buyer" target="_blank">
-        {{dc 'hc_terms_and_conditions'}}
+      <a href="https://vinted.ca/en/terms-and-conditions" target="_blank">
+        {{dc "hc_terms_and_conditions"}}
+      </a>
+      <a href="https://vinted.ca/en/privacy-statement" target="_blank">
+        {{dc "hc_privacy_policy"}}
       </a>
     </div>
     <div class="footer-language-selector">
       {{#if alternative_locales}}
-      <div class="dropdown language-selector" aria-haspopup="true">
-        <a class="dropdown-toggle">
-          {{current_locale.name}}
-        </a>
-        <span class="dropdown-menu dropdown-menu-end" role="menu">
-          {{#each alternative_locales}}
-          <a href="{{url}}" dir="{{direction}}" rel="nofollow" role="menuitem">
-            {{name}}
+        <div class="dropdown language-selector" aria-haspopup="true">
+          <a class="dropdown-toggle">
+            {{current_locale.name}}
           </a>
-          {{/each}}
-        </span>
-      </div>
+          <span class="dropdown-menu dropdown-menu-end" role="menu">
+            {{#each alternative_locales}}
+              <a
+                href="{{url}}"
+                dir="{{direction}}"
+                rel="nofollow"
+                role="menuitem"
+              >
+                {{name}}
+              </a>
+            {{/each}}
+          </span>
+        </div>
       {{/if}}
     </div>
   </div>

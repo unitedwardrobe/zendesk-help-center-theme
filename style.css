@@ -3,8 +3,8 @@
 html,
 body {
   font-size: 10px;
-  font-family: "Gibson", sans-serif;
-  color: #082229;
+  font-family: "MaisonNeue", sans-serif;
+  color: #171717;
   -webkit-font-smoothing: antialiased;
   position: relative;
   min-height: 100vh;
@@ -137,7 +137,7 @@ h3 {
 }
 
 .header-button img {
-  height: 24px;
+  height: 36px;
 }
 
 .show-search img {
@@ -187,7 +187,7 @@ h3 {
 
 .search-form {
   display: flex;
-  border-radius: 8px;
+  border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 2px 4px 0 rgba(8, 34, 41, 0.2);
   max-width: 520px;
@@ -197,18 +197,18 @@ h3 {
 
 .search-form input[type="search"] {
   font-size: 1.7rem;
-  font-family: "Gibson", sans-serif;
+  font-family: "MaisonNeue", sans-serif;
   padding: 0 16px 0 56px;
   flex: 1;
   height: 56px;
-  font-weight: normal;
-  color: #082229;
+  font-weight: 300;
+  color: #171717;
 }
 
 .search-form input[type="search"]::placeholder {
   color: #959595;
   font-size: 1.7rem;
-  font-family: "Gibson", sans-serif;
+  font-family: "MaisonNeue", sans-serif;
 }
 
 .search-form:before {
@@ -224,16 +224,20 @@ h3 {
 }
 
 .search-form input[type="submit"] {
-  background-color: #01befe;
+  background-color: #007782;
   padding: 0 24px;
   height: 56px;
-  color: #fff;
+  color: #ffffff;
   font-weight: 500;
   font-size: 1.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
   min-width: 160px;
+}
+
+.search-form input[type="submit"]:hover {
+  background-color: rgb(0, 117, 128);
 }
 
 @media (max-width: 1023px) {
@@ -310,7 +314,7 @@ h3 {
   display: flex;
   list-style: none;
   font-size: 1.3rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "MaisonNeue", sans-serif;
 }
 
 .navigation .breadcrumbs li:last-child::after {
@@ -322,12 +326,12 @@ h3 {
   display: inline-block;
   width: 16px;
   text-align: center;
-  color: #a9b2b4;
+  color: #757575;
 }
 
 .navigation .breadcrumbs a {
   text-decoration: none;
-  color: #01befe;
+  color: #007782;
 }
 
 .navigation .breadcrumbs a:hover {
@@ -335,7 +339,7 @@ h3 {
 }
 
 .navigation .breadcrumbs li:last-child a {
-  color: rgba(8, 34, 41, 0.75);
+  color: #757575;
 }
 
 @media (min-width: 1024px) {
@@ -374,11 +378,10 @@ h3 {
   justify-content: center;
   align-items: center;
   padding: 12px 8px;
-  flex: 1;
   max-width: 160px;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #a9b2b4;
+  color: #757575;
   text-align: center;
   transition: color 150ms ease-in-out;
 }
@@ -388,7 +391,7 @@ h3 {
   display: none;
   width: 36px;
   height: 4px;
-  background-color: #01befe;
+  background-color: #007782;
   border-radius: 2px;
   position: absolute;
   left: 50%;
@@ -397,7 +400,7 @@ h3 {
 }
 
 .category-button:hover {
-  color: #082229;
+  color: #171717;
 }
 
 .category-button.selected::after {
@@ -405,7 +408,7 @@ h3 {
 }
 
 .category-button.selected {
-  color: #082229;
+  color: #171717;
   font-weight: 500;
 }
 
@@ -415,10 +418,11 @@ h3 {
   }
 
   .category-button {
-    max-width: 210px;
+    max-width: none;
     height: 48px;
     border-radius: 24px;
     font-size: 1.8rem;
+    padding: 12px 24px;
   }
 }
 
@@ -443,7 +447,7 @@ ul.list {
   width: 100%;
   min-height: 80px;
   padding: 12px 0;
-  color: #082229;
+  color: #171717;
   font-weight: 400;
   font-size: 1.7rem;
   line-height: 2.4rem;
@@ -453,7 +457,7 @@ ul.list {
 
 .list li > .item:hover,
 .list li > a:hover {
-  color: #01befe;
+  color: #007782;
 }
 
 .list li > .item::after,
@@ -502,8 +506,8 @@ ul.list {
   .blocks li a,
   .blocks li .item {
     height: 240px;
-    border: 2px solid #eee;
-    border-radius: 8px;
+    border: 2px solid #F2F2F2;
+    border-radius: 4px;
     padding: 12px;
     flex-direction: column;
     justify-content: center;
@@ -511,7 +515,7 @@ ul.list {
 
   .blocks li a:hover,
   .blocks li .item:hover {
-    border-color: #d9f6ff;
+    border-color: #eeeeee;
   }
 
   .blocks li a:after,
@@ -539,7 +543,7 @@ ul.list {
 
 .footer {
   margin-top: 128px;
-  background-color: #f7f7f7;
+  background-color: #f2f2f2;
   padding: 0 20px;
 }
 
@@ -553,7 +557,7 @@ ul.list {
 }
 
 .footer-logo .horizontal-logo {
-  height: 24px;
+  height: 36px;
 }
 
 .footer-logo .vertical-logo {
@@ -566,12 +570,12 @@ ul.list {
 
 .footer a {
   font-size: 1.7rem;
-  color: #082229;
+  color: #171717;
   text-decoration: none;
 }
 
 .footer a:hover {
-  color: #01befe;
+  color: #007782;
 }
 
 .dropdown-toggle::after {
@@ -601,6 +605,16 @@ ul.list {
   .footer-terms {
     margin-right: 32px;
   }
+
+  .footer-terms a::after {
+    content: "·";
+    display: inline-block;
+    margin: 0 8px;
+  }
+
+  .footer-terms a:last-child::after {
+    display: none;
+  }
 }
 
 @media (max-width: 1023px) {
@@ -609,7 +623,13 @@ ul.list {
   }
 
   .footer-terms {
-    margin: 24px 0;
+    margin: 16px 0;
+  }
+
+  .footer-terms a {
+    display: block;
+    text-align: center;
+    margin: 8px 0;
   }
 
   .footer-inner {
@@ -660,13 +680,14 @@ ul.list {
 .article-body {
   margin-top: 24px;
   font-size: 1.6rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "MaisonNeue", sans-serif;
+  font-weight: 300;
   line-height: 2.4rem;
-  color: rgba(8, 34, 41, 0.75);
+  color: #757575;
 }
 
 .article-body a {
-  color: #01befe;
+  color: #007782;
   text-decoration: none;
 }
 
@@ -677,25 +698,25 @@ ul.list {
 .article-body h2,
 .article-body h3,
 .article-body h4 {
-  font-family: "Gibson", sans-serif;
-  color: #082229;
+  font-family: "MaisonNeue", sans-serif;
+  color: #171717;
   margin-top: 4rem;
   font-weight: 500;
 }
 
 .article-body strong {
-  color: #082229;
+  color: #171717;
 }
 
 .article-body pre {
   position: relative;
-  font-family: "Open Sans", sans-serif;
+  font-family: "MaisonNeue", sans-serif;
   white-space: normal;
   font-size: 1.4rem;
-  color: #082229;
+  color: #757575;
   padding: 16px 24px 16px 54px;
   margin: 3.2rem 0;
-  background-color: #e5f8fe;
+  border: 1px solid rgba(17, 17, 17, 0.08);
   border-radius: 12px;
 }
 
@@ -843,19 +864,24 @@ ul.list {
 .uw-button a {
   position: relative;
   height: 52px;
-  border-radius: 8px;
-  font-family: "Open Sans", sans-serif;
+  border-radius: 4px;
+  font-family: "MaisonNeue", sans-serif;
   font-size: 1.8rem;
-  font-weight: bold;
-  background-color: #01befe;
+  font-weight: 500;
+  background-color: #007782;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   overflow: hidden;
   width: 100%;
   border: none;
+}
+
+.request-form input[type="submit"]:hover,
+.uw-button a:hover {
+  background-color: rgb(0, 117, 128);
 }
 
 .request-form footer:hover::after,
@@ -868,7 +894,6 @@ ul.list {
   top: 0;
   left: 0;
   pointer-events: none;
-  background-color: rgba(255, 255, 255, 0.2);
   display: block;
 }
 
@@ -899,7 +924,7 @@ ul.list {
   height: 32px;
   border-radius: 2px;
   font-size: 1.7rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "MaisonNeue", sans-serif;
 }
 
 .pagination li:not(.pagination-current):hover {
@@ -907,13 +932,13 @@ ul.list {
 }
 
 .pagination-current {
-  background-color: #01befe;
-  color: #fff;
-  font-weight: bold;
+  background-color: #007782;
+  color: #ffffff;
+  font-weight: 500;
 }
 
 .pagination a {
-  color: #082229;
+  color: #171717;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -959,20 +984,15 @@ ul.list {
   max-width: 560px;
 }
 
-.contact-topics-container,
-.contact-form-container {
-  display: none;
-}
-
 .contact-form-container h2 .contact-topics-container h2 {
   font-size: 3.2rem;
   font-weight: 500;
 }
 
 .contact-form-container p {
-  color: rgba(8, 34, 41, 0.75);
+  color: #757575;
   font-size: 1.6rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "MaisonNeue", sans-serif;
   line-height: 2.4rem;
 }
 
@@ -990,70 +1010,65 @@ ul.list {
 
 .form-field.required label::after {
   content: " *";
-  color: #01befe;
+  color: #007782;
 }
 
+.nesty-input,
 .form-field input[type="text"],
 .upload-dropzone,
 .form-field textarea {
   position: relative;
   padding: 15px 16px;
   border: 1px solid #e2e7ea;
-  border-radius: 8px;
+  border-radius: 4px;
   font-weight: 500;
   transition: border 150ms ease-in-out;
   font-size: 1.7rem;
-  color: #082229;
-  font-weight: normal;
-  font-family: "Gibson", sans-serif;
+  color: #171717;
+  font-weight: 300;
+  font-family: "MaisonNeue", sans-serif;
   line-height: 2.5rem;
+}
+
+.nesty-input {
+  height: 52px;
+  outline: none;
+  padding: 0 50px 0 16px;
+  line-height: 52px;
+}
+
+.nesty-input:focus {
+  border: 1px solid #007782;
+}
+
+.nesty-input::after {
+  content: "";
+  background-image: url($assets-angle-down-png);
+  background-size: contain;
+  width: 18px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
 }
 
 .upload-dropzone a,
 .upload-dropzone span {
   font-size: 1.7rem;
   color: #959595;
-  font-weight: normal;
-  font-family: "Gibson", sans-serif;
+  font-weight: 300;
+  font-family: "MaisonNeue", sans-serif;
 }
 
 .form-field input:focus,
 .form-field textarea:focus {
   outline: none;
-  border-color: #01befe;
+  border-color: #007782;
 }
 
 .form-field textarea {
   height: 180px;
-}
-
-.request_custom_fields_360004329459,
-.request_custom_fields_360004301640,
-.request_subject {
-  display: none;
-}
-
-.request_custom_fields_360004408319 {
-  position: relative;
-  display: none;
-}
-
-#request_custom_fields_360004408319 {
-  cursor: pointer;
-}
-
-.request_custom_fields_360004408319::after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 20px;
-  right: 16px;
-  width: 17px;
-  height: 10px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url($assets-angle-down-png);
-  pointer-events: none;
 }
 
 .contact-categories-container p {
@@ -1119,7 +1134,7 @@ ul.list {
 
 .orders {
   margin: 24px;
-  background-color: #fff;
+  background-color: #ffffff;
   max-width: 480px;
   flex: 1;
   pointer-events: initial;
@@ -1146,15 +1161,15 @@ ul.list {
   height: 48px;
   border-radius: 50%;
   margin-left: -16px;
-  border: 2px solid #fff;
+  border: 2px solid #ffffff;
 }
 
 .additional-images {
-  background-color: #01befe;
+  background-color: #007782;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: #ffffff;
   font-size: 1.7rem;
 }
 
@@ -1171,14 +1186,14 @@ ul.list {
 }
 
 .order-date {
-  font-family: "Open Sans", sans-serif;
+  font-family: "MaisonNeue", sans-serif;
   margin-top: 4px;
   font-size: 1.2rem;
   color: #aaa;
 }
 
 .order:hover .order-reference {
-  color: #01befe;
+  color: #007782;
 }
 
 .community-enabled .orders-container {

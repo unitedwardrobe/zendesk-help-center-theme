@@ -1,123 +1,67 @@
 <header class="header blue">
   <div class="header-content">
-    {{#link 'help_center'}}
-    <div class="logo header-button">
-      <img src="{{asset 'logo.png'}}" alt="{{t 'home_page' name=help_center.name}}" class="hide-desktop" />
-      <img src="{{asset 'logo-horizontal.png'}}" alt="{{t 'home_page' name=help_center.name}}" class="hide-mobile" />
-    </div>
+    {{#link "help_center"}}
+      <div class="logo header-button">
+        <img
+          src="{{asset "logo.png"}}"
+          alt="{{t "home_page" name=help_center.name}}"
+          class="hide-desktop"
+        />
+        <img
+          src="{{asset "logo-horizontal.png"}}"
+          alt="{{t "home_page" name=help_center.name}}"
+          class="hide-mobile"
+        />
+      </div>
     {{/link}}
   </div>
   <div class="search">
     <div class="content">
-      <h1>{{dc 'hc_search_title'}}</h1>
-      <p>{{dc 'hc_search_subtitle'}}</p>
-      {{search submit=true instant=settings.instant_search class='search-form'}}
+      <h1>{{dc "hc_search_title"}}</h1>
+      <p>{{dc "hc_search_subtitle"}}</p>
+      {{search submit=true instant=settings.instant_search class="search-form"}}
     </div>
   </div>
 </header>
-
 <div class="content promoted-articles">
   <section class="inner-content">
-    <h2>{{t 'promoted_articles'}}</h2>
+    <h2>{{t "promoted_articles"}}</h2>
     <ul class="list">
       {{#each promoted_articles}}
-      <li>
-        <a href='{{url}}'>
-          {{title}}
-        </a>
-      </li>
+        <li>
+          <a href="{{url}}">
+            {{title}}
+          </a>
+        </li>
       {{/each}}
     </ul>
   </section>
 </div>
-
 <ul class="categories">
   {{#each categories}}
-  <li class="category-button" data-category-id="{{id}}">{{name}}</li>
+    <li class="category-button" data-category-id="{{id}}">{{name}}</li>
   {{/each}}
 </ul>
-
 <div class="content">
   {{#each categories}}
-  <section class="inner-content category" data-category-id="{{id}}">
-    <h2>{{t 'topics'}}</h2>
-    <ul class="list blocks">
-      {{#each sections}}
-      <li>
-        <a href='{{url}}'>
-          <div class="block-icon">
-            {{! Buyer icons }}
-            {{#is id 360000916480}}
-            <img src="{{asset 'icon-getting-started.png'}}" alt="{{name}}" />
-            {{else}}
-            {{#is id 360000916460}}
-            <img src="{{asset 'icon-my-wardrobe.png'}}" alt="{{name}}" />
-            {{else}}
-            {{#is id 360001154079}}
-            <img src="{{asset 'icon-parcel-received.png'}}" alt="{{name}}" />
-            {{else}}
-            {{#is id 360001160620}}
-            <img src="{{asset 'icon-paying.png'}}" alt="{{name}}" />
-            {{else}}
-            {{#is id 360001154119}}
-            <img src="{{asset 'icon-return.png'}}" alt="{{name}}" />
-            {{else}}
-            {{#is id 360001160660}}
-            <img src="{{asset 'icon-cancellation.png'}}" alt="{{name}}" />
-            {{else}}
-            {{#is id 360001154139}}
-            <img src="{{asset 'icon-my-account.png'}}" alt="{{name}}" />
-            {{else}}
-            {{#is id 360001154159}}
-            <img src="{{asset 'icon-uw-hot-deals.png'}}" alt="{{name}}" />
-            {{else}}
-            {{#is id 360001160680}}
-            <img src="{{asset 'icon-getting-started.png'}}" alt="{{name}}" />
-            {{else}}
-            {{#is id 360001160700}}
-            <img src="{{asset 'icon-my-wardrobe.png'}}" alt="{{name}}" />
-            {{else}}
-            {{#is id 360001160740}}
-            <img src="{{asset 'icon-parcel-received.png'}}" alt="{{name}}" />
-            {{else}}
-            {{#is id 360001160760}}
-            <img src="{{asset 'icon-paying.png'}}" alt="{{name}}" />
-            {{else}}
-            {{#is id 360001154179}}
-            <img src="{{asset 'icon-return.png'}}" alt="{{name}}" />
-            {{else}}
-            {{#is id 360001154199}}
-            <img src="{{asset 'icon-cancellation.png'}}" alt="{{name}}" />
-            {{else}}
-            {{#is id 360001160820}}
-            <img src="{{asset 'icon-my-account.png'}}" alt="{{name}}" />
-            {{else}}
-            {{#is id 360001154219}}
-            <img src="{{asset 'icon-uw-hot-deals.png'}}" alt="{{name}}" />
-            {{else}}
-            <img src="{{asset 'icon-other.png'}}" alt="{{name}}" />
-            {{/is}}
-            {{/is}}
-            {{/is}}
-            {{/is}}
-            {{/is}}
-            {{/is}}
-            {{/is}}
-            {{/is}}
-            {{/is}}
-            {{/is}}
-            {{/is}}
-            {{/is}}
-            {{/is}}
-            {{/is}}
-            {{/is}}
-            {{/is}}
-          </div>
-          <span class="block-title">{{name}}</span>
-        </a>
-      </li>
-      {{/each}}
-    </ul>
-  </section>
+    <section class="inner-content category" data-category-id="{{id}}">
+      <h2>{{t "topics"}}</h2>
+      <ul class="list blocks">
+        {{#each sections}}
+          <li>
+            <a href="{{url}}">
+              <div class="block-icon">
+                <img
+                  src="{{asset id suffix=".png"}}"
+                  alt="{{name}}"
+                  onerror="this.src='{{asset "360005487959.png"}}'"
+                />
+              </div>
+              <span class="block-title">{{name}}</span>
+            </a>
+          </li>
+        {{/each}}
+      </ul>
+    </section>
   {{/each}}
 </div>
